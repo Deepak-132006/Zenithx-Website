@@ -9,7 +9,7 @@
   align-items: center;
 }
 .home-title {
-  width: 70%;
+  width: 75%;
   height: 2.5rem;
   padding-left: 0.1rem;
   padding-right: 0.6rem;
@@ -91,12 +91,16 @@
 .home-graph img {
   width: 75%;
   height: 75%;
- box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   display: block;
   margin: 0 auto;
   overflow: hidden;
-
 }
 
+@media (max-width: 480px) {
+  {
+    display: none;
+  }
+}
