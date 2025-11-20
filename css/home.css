@@ -9,8 +9,8 @@
   align-items: center;
 }
 .home-title {
-  width: 75%;
-  height: 2.5rem;
+  width: clamp(28%, 28vw, 80%);
+  height: 2.8rem;
   padding-left: 0.1rem;
   padding-right: 0.6rem;
   padding: -0.67rem 0px;
@@ -20,10 +20,15 @@
   border-radius: 1.7rem;
   position: relative;
   top: 4rem;
-  left: 5rem;
+  margin: 0px auto;
+}
+.home-title p {
+  font-size: 17px;
+  text-align: center;
+  margin: 0px auto;
 }
 .home-title img {
-  width: 40px;
+  width: 53px;
   height: 100%;
 }
 .home-heading {
@@ -48,11 +53,15 @@
   color: #c1c0c0;
 }
 .email {
-  align-items: center;
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+  margin: 0 auto;           
+  gap: 1rem;  
 }
 
 .email input {
-  width: 50%;
+  width: 30%;
   height: 3rem;
   display: flex;
   background: #fff;
@@ -60,7 +69,6 @@
   border-radius: 1.7rem;
   position: relative;
   top: 9.5rem;
-  left: 5rem;
   font-size: 16px;
   padding: 8px;
   padding-left: 20px;
@@ -76,8 +84,7 @@
   color: #fff;
   background-color: var(--secondary-color);
   position: relative;
-  top: 6.4rem;
-  left: 21.2rem;
+  top: 9.5rem;
   border: 3px solid #a2a2a232;
   &:hover {
     background-color: var(--tertiary-color);
@@ -86,11 +93,11 @@
 
 .home-graph {
   position: relative;
-  top: 9.1rem;
+  top:12rem;
 }
 .home-graph img {
-  width: 75%;
-  height: 75%;
+  width: 65%;
+  height: 65%;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -99,8 +106,104 @@
   overflow: hidden;
 }
 
-@media (max-width: 480px) {
-  {
-    display: none;
+@media (max-width: 768px) {
+  .home-title {
+    width: 80%;
+    height: auto;
+    padding-left: 0.1rem;
+    padding-right: 0.6rem;
+    padding: -0.67rem 0px;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border-radius: 1.7rem;
+    position: relative;
+    top: 4rem;
+  }
+  .home-title img {
+    width: 40px;
+    height: 100%;
+  }
+  .home-heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5.5rem;
+    align-items: center;
+  }
+
+  .head-1 {
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Inter Tight", sans-serif;
+    color: #dad5d5;
+  }
+  .head-2 {
+    font-size: 16px;
+    position: relative;
+    top: 1.5rem;
+    color: #c1c0c0;
+  }
+  .email {
+    align-items: center;
+  }
+
+  .email input {
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    background: #fff;
+    border: none;
+    border-radius: 1.7rem;
+    position: relative;
+    top: 9.5rem;
+    font-size: 16px;
+    padding: 8px;
+    padding-left: 20px;
+    color: var(--secondary-color);
+  }
+
+  .email button {
+    width: 8.5rem;
+    height: 3.3rem;
+    padding: 0.5rem;
+    border-radius: 1.7rem;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    position: relative;
+    top: 9.5rem;
+    border: 3px solid #a2a2a232;
+    &:hover {
+      background-color: var(--tertiary-color);
+    }
+  }
+
+  .home-graph {
+    position: relative;
+    top: 9.1rem;
+  }
+  .home-graph img {
+    width: 75%;
+    height: 75%;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: block;
+    position: relative;
+    top: 3rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 00px){
+  
+  .home-title{
+    width: 30%;
+    height: 3rem;
+  }
+  .home-title p{
+    font-size: 16px;
   }
 }
