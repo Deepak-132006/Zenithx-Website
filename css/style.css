@@ -20,8 +20,7 @@
 /* -------------------- Body -------------------- */
 body {
   font-family: "Inter Tight", sans-serif;
-  background: url("/images/bg/6.jpg") no-repeat center center fixed;
-  background-size: cover;
+
   min-height: 100vh;
   position: relative;
 }
@@ -29,7 +28,7 @@ body {
 .active {
   color: #4f46e5;
 }
-
+hras
 /* -------------------- Loader -------------------- */
 #loader {
   position: fixed;
@@ -356,6 +355,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
+  
 
   .nav-links.show {
     display: flex;
@@ -383,6 +383,19 @@ body {
       transform: translateY(-50%);
     }
   }
+
+    .nav-links.show li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.nav-links.show li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.nav-links.show li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.nav-links.show li:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
   .hamburger {
     display: flex;

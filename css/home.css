@@ -6,7 +6,12 @@
 }
 
 .home-container {
-  align-items: center;
+  background: url("/images/bg/6.jpg") no-repeat center center/cover;
+  background-attachment: scroll;
+  background-size: 100%;
+  min-height: 100vh;      
+  width: 100%;            
+  position: relative;
 }
 .home-title {
   width: clamp(28%, 28vw, 80%);
@@ -197,7 +202,7 @@
   }
 }
 
-@media (max-width: 00px){
+/* @media (max-width: 00px){
   
   .home-title{
     width: 30%;
@@ -206,4 +211,4 @@
   .home-title p{
     font-size: 16px;
   }
-}
+} */
