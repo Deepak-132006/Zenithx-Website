@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "contact",
     "home-image",
   ];
- let loadedCount = 0;
- const total = sections.length;
+  let loadedCount = 0;
+  const total = sections.length;
 
   sections.forEach(async (section) => {
     try {
@@ -19,24 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const html = await res.text();
       document.getElementById(section).innerHTML = html;
-      console.log(`${section}.html loaded `);
+      console.log(`${section}.html loaded`);
+
+      setupHamburger();
     } catch (err) {
       console.error(err);
-      document.getElementById(section).innerHTML =
-        "<p>Page not Found</p>";
-    }finally{
-        loadedCount++;
-        if(loadedCount === total) hideLoader();
+      document.getElementById(section).innerHTML = "<p>Page not Found</p>";
+    } finally {
+      loadedCount++;
+      if (loadedCount === total) hideLoader();
     }
   });
 
-  function hideLoader(){
+  function hideLoader() {
     const loader = document.getElementById("loader");
-    loader.style.opacity=0;
-    setTimeout(()=>{
-        loader.style.display="none";
-        document.body.classList.add("loaded")
-    })
+    if (!loader) return;
+    loader.style.opacity = 0;
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.add("loaded");
+    }, 400);
   }
 
   const links = document.querySelectorAll('nav a[href^="#"]');
@@ -76,21 +78,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function setupHamburger() {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!hamburger || !navLinks) return;
 
 
-// Hamburger
+  if (hamburger.dataset.bound === "true") return;
+  hamburger.dataset.bound = "true";
 
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
+  hamburger.addEventListener("click", () => {
+    if (navLinks.classList.contains("show")) {
+      navLinks.classList.remove("show");
+      navLinks.classList.add("hide");
+    } else {
+      navLinks.classList.remove("hide");
+      navLinks.classList.add("show");
+    }
+    hamburger.classList.toggle("active");
+  });
 
-hamburger.addEventListener("click", () => {
-  if (navLinks.classList.contains("show")) {
-    navLinks.classList.remove("show");
-    navLinks.classList.add("hide");
-  } else {
-    navLinks.classList.remove("hide");
-    navLinks.classList.add("show");
-  }
-  hamburger.classList.toggle("active");
-});
-
+}
