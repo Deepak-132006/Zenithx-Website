@@ -1,0 +1,78 @@
+:root {
+  --light-color: #b67e7d;
+  --secondary-color: #640000;
+  --tertiary-color: #420001;
+  --text-color: #040b15;
+  --content-color: #dad5d5;
+}
+
+.container {
+  display: flex;
+}
+.company {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.company h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.company-logo {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 10s linear infinite;
+}
+
+.logo-track img {
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+}
+
+.fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    white 0%,
+    transparent 10%,
+    transparent 90%,
+    white 100%
+  );
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+@media (min-width: 768px) {
+  .logo-track img { width: 100px; }
+  .company h5 { font-size: 1.4rem; }
+}
+
+
+@media (min-width: 1024px) {
+  .logo-track img { width: 120px; }
+}
+
+
+.company h5 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color);
+}

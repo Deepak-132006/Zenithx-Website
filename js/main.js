@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "faq",
     "blog",
     "contact",
-    "home-image",
   ];
   let loadedCount = 0;
   const total = sections.length;
