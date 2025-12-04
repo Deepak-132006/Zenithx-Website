@@ -18,6 +18,7 @@
   transform: translateX(-50%);
   margin-top: 10.5%;
   margin-left: 5%;
+  margin-bottom: -.6%;
 }
 .home-graph img {
   width: 90%;
@@ -551,6 +552,8 @@
     width: 100%;
     left: 5%;
     margin-top: 32%;
+    margin-bottom: -3.3%;
+
   }
   .home-graph img {
     width: 90%;
