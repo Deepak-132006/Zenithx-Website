@@ -122,14 +122,14 @@
   object-fit: contain;
 }
 
-.htw {
+.htw ,.t-1{
   font-size: 42px;
   font-weight: 420;
   color: var(--tertiary-color);
   text-align: center;
 }
 
-.htw-content {
+.htw-content, .c-1 {
   font-size: 15px;
   color: var(--tertiary-color);
   text-align: center;
