@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "home",
     "how-it-works",
     "features",
-    "about",
     "faq",
-    "blog",
+    "testimonials",
     "contact",
   ];
   let loadedCount = 0;

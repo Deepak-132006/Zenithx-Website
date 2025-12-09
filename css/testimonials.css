@@ -1,0 +1,72 @@
+:root {
+  --light-color: #b67e7d;
+  --secondary-color: #640000;
+  --tertiary-color: #420001;
+  --text-color: #040b15;
+  --content-color: #dad5d5;
+}
+
+* {
+  font-family: "Inter Tight", sans-serif;
+  scroll-behavior: auto;
+}
+
+.testimonials{
+  padding: 4rem 1rem 0rem;
+
+}
+.test-title{
+    width: fit-content !important;
+}
+.cards-container{
+    margin: 0px auto;
+}
+.card-1{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 2rem;
+    background: linear-gradient(to bottom, rgba(182, 126, 125, 0.288), transparent 58%);
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    border: solid whitesmoke 2px;
+}
+.card-1 p{
+    font-size: large;
+    color: var(--secondary-color);
+}
+.card-title{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+.card-title p{
+    font-size: larger;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.card-title img{
+    width: 1.5rem;
+}
+.client{
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+}
+.client img{
+    width: 4em;
+    border-radius: 100%;
+}
+.client-details h1{
+    font-size: larger;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.client-details p{
+    font-weight: 100;
+    font-size: 16px;
+
+}

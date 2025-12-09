@@ -11,7 +11,7 @@
 }
 
 .features {
-  padding: 4rem 0 3rem;
+  padding: 4rem 0 0rem;
   background: linear-gradient(
     to top,
     rgba(100, 0, 0, 0.26),
@@ -20,7 +20,10 @@
   );
   position: relative;
 }
-
+.feature-items{
+  display: grid;
+  gap: 1rem;
+}
 .features::after {
   content: "";
   display: block;
@@ -91,11 +94,6 @@
   background: #ffffff;
 }
 
-.item-1:hover,
-.item-3:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(100, 0, 0, 0.15);
-}
 .f-wrap h5 {
   font-size: 22px;
   font-weight: 600;
@@ -171,8 +169,6 @@
     font-size: 1.1rem;
   }
 }
-
-
 .f-icon img{
   margin: 0px auto;
   width: 34px;
