@@ -11,62 +11,320 @@
   scroll-behavior: auto;
 }
 
-.testimonials{
-  padding: 4rem 1rem 0rem;
+.test-title {
+  width: 150px !important;
+}
+.cards-container {
+  display: flex;
+  margin: 0px 1px;
+  max-width: 1200px;
+}
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  border: solid rgba(237, 235, 235, 0.748) 2px;
+  transition: background- 1s ease-in-out;
+}
+.card-1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
 
+.card-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(182, 126, 125, 0.16),
+    transparent 58%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+  border-radius: 0.6rem;
 }
-.test-title{
-    width: fit-content !important;
+
+.card-1:hover::before {
+  opacity: 1;
 }
-.cards-container{
-    margin: 0px auto;
+
+.card-1 > * {
+  position: relative;
+  z-index: 1;
 }
-.card-1{
+
+.card-1 p {
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+.card-title {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-title p {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.card-title img {
+  width: 1.5rem;
+}
+.client {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.client img {
+  width: 4em;
+  border-radius: 100%;
+}
+.client-details h1 {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.client-details p {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .cards-container .card-1 {
+    display: none;
+  }
+
+  .cards-container .card-1.one,
+  .cards-container .card-1.two,
+  .cards-container .card-1.three {
+    display: block;
+  }
+  .cards-container {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    gap: 2rem;
-    background: linear-gradient(to bottom, rgba(182, 126, 125, 0.288), transparent 58%);
-    padding: 1.5rem;
-    border-radius: 0.6rem;
-    border: solid whitesmoke 2px;
+    gap: 1rem;
+  }
+  .two {
+    width: 100%;
+  }
 }
-.card-1 p{
-    font-size: large;
-    color: var(--secondary-color);
-}
-.card-title{
+@media (min-width: 769px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .two {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .four {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .three {
+    grid-column: 2;
+    grid-row: 2;
     width: fit-content;
+    height: 425px;
+    position: relative;
+    top: -40%;
+  }
+
+  .one,
+  .three {
+    min-height: 420px;
+  }
+
+  .two,
+  .four {
+    min-height: 250px;
+  }
+  .six,
+  .seven {
+    position: relative;
+    top: -75%;
+  }
+
+  .five {
+    grid-column: 1 / -1;
+    width: 100%;
+    position: relative;
+    top: -60%;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: 380px 380px;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven {
+    width: 380px;
+    max-width: 480px;
+  }
+
+  .one,
+  .three {
+    min-height: 420px;
+  }
+
+  .two,
+  .four {
+    min-height: 250px;
+  }
+
+  .three {
+    position: relative;
+    top: -40%;
+  }
+
+  .six,
+  .seven {
+    position: relative;
+    top: -75%;
+  }
+
+  .five {
+    grid-column: 1 / -1;
+    width: 760px;
+    max-width: 760px;
+    position: relative;
+    top: -60%;
+  }
+}
+@media (min-width: 1025px) {
+  .cards-container {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 769px) {
+  .two,
+  .three,
+  .seven {
+    width: 100%;
+    max-width: 600px;
+  }
+  .five {
+    width: 100%;
+    max-width: 700px;
+  }
+  .three {
     height: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    max-height: 430px;
+  }
 
+  .five {
+    width: 100%;
+    max-width: 1200px;
+  }
 }
-.card-title p{
-    font-size: larger;
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-.card-title img{
-    width: 1.5rem;
-}
-.client{
-    display: flex;
-    align-items: center;
-    gap: 12rem;
-}
-.client img{
-    width: 4em;
-    border-radius: 100%;
-}
-.client-details h1{
-    font-size: larger;
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-.client-details p{
-    font-weight: 100;
-    font-size: 16px;
 
+@media (min-width: 1025px) {
+  .cards-container {
+    margin: 0 auto;
+  }
+  .two,
+  .three,
+  .seven {
+    max-width: 700px;
+  }
+}
+
+.testimonials {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 1rem 8rem;
+}
+
+.testimonials::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  font-family: Georgia, serif;
+  font-size: 90vmin;
+  line-height: 1;
+  color: #640000;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-12deg);
+}
+
+.testimonials::after {
+  content: "”";
+  position: absolute;
+  bottom: -60px;
+  right: -40px;
+  font-family: Georgia, serif;
+  font-size: 90vmin;
+  line-height: 1;
+  color: #640000;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(15deg);
+}
+
+.test-container > * {
+  position: relative;
+  z-index: 1;
+}
+.testimonials::before,
+.testimonials::after {
+  font-size: 110vmin;
+  opacity: 0.06;
+}
+
+.testimonials {
+  position: relative;
+  background: linear-gradient(
+      135deg,
+      rgba(182, 126, 125, 0.03) 0%,
+      rgba(100, 0, 0, 0.02) 100%
+    ),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.12"/></svg>')
+      repeat;
+  background-blend-mode: soft-light;
+}
+.testimonials {
+  overflow: hidden !important;
 }

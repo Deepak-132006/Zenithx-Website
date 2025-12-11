@@ -389,8 +389,26 @@
     margin-left: 0%;
     left: 0%;
     transform: translateX(0%);
+    
   }
 }
+/* TABLET FIX — for screens between 769px and 1300px */
+@media (min-width: 769px) and (max-width: 1300px) {
+
+  .home-graph {
+    width: 85%;
+    left: 45%;
+    transform: translateX(-50%);
+    margin-top: 18%;      /* bigger top margin → no overlap */
+    margin-bottom: -2rem;
+  }
+
+  .home-graph img {
+    width: 100%;
+    top: 2rem;            /* reduce the lift */
+  }
+}
+
 
 .home-title {
   width: 24rem;
