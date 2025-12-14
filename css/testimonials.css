@@ -122,6 +122,9 @@
   }
 }
 @media (min-width: 769px) {
+  .testimonials{
+  height: 105rem;
+}
   .cards-container {
     display: grid;
     grid-template-columns: 380px 1fr;
@@ -169,11 +172,7 @@
   .four {
     min-height: 250px;
   }
-  .six,
-  .seven {
-    position: relative;
-    top: -75%;
-  }
+
 
   .five {
     grid-column: 1 / -1;
@@ -218,7 +217,7 @@
   .six,
   .seven {
     position: relative;
-    top: -75%;
+    top: -65%;
   }
 
   .five {
@@ -255,6 +254,7 @@
     width: 100%;
     max-width: 1200px;
   }
+
 }
 
 @media (min-width: 1025px) {
