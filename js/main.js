@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(`${section}.html loaded`);
 
       setupHamburger();
+      if (section === "faq") setupFAQAccordion();
     } catch (err) {
       console.error(err);
       document.getElementById(section).innerHTML = "<p>Page not Found</p>";
@@ -82,7 +83,6 @@ function setupHamburger() {
 
   if (!hamburger || !navLinks) return;
 
-
   if (hamburger.dataset.bound === "true") return;
   hamburger.dataset.bound = "true";
 
@@ -96,5 +96,31 @@ function setupHamburger() {
     }
     hamburger.classList.toggle("active");
   });
+}
+function setupFAQAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
 
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    question.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // close all
+      faqItems.forEach(i => {
+        i.classList.remove("active");
+        const ans = i.querySelector(".faq-answer");
+        ans.style.height = 0;
+        ans.style.opacity = 0;
+      });
+
+      // open clicked one
+      if (!isActive) {
+        item.classList.add("active");
+        answer.style.height = answer.scrollHeight + "px";
+        answer.style.opacity = 1;
+      }
+    });
+  });
 }
