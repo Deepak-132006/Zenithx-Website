@@ -4,9 +4,9 @@
   --tertiary-color: #420001;
   --text-color: #040b15;
 }
-/* *{
+html{
     scroll-behavior: auto;
-} */
+}
 .nav-container {
   display: flex;
   /* align-content: center; */

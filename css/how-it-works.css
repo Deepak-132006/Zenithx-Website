@@ -8,9 +8,10 @@
 
 * {
   font-family: "Inter Tight", sans-serif;
-  /* scroll-behavior: auto; */
 }
-
+html{
+    scroll-behavior: auto;
+}
 .carousel-container {
   width: 100%;
   overflow: hidden;
