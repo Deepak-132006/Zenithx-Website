@@ -8,10 +8,9 @@
 
 * {
   font-family: "Inter Tight", sans-serif;
+  scroll-behavior: auto;
 }
-html{
-    scroll-behavior: auto;
-}
+
 .test-title {
   width: 150px !important;
 }

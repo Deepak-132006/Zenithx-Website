@@ -15,12 +15,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-    scroll-behavior: auto;
-}
+
 body {
   font-family: "Inter Tight", sans-serif;
-
+  scroll-behavior: auto;
 }
 
 .active {

@@ -8,9 +8,7 @@
   --text-color: #040b15;
   --content-color: #dad5d5;
 }
-html{
-    scroll-behavior: auto;
-}
+
 .features {
   padding: 4rem 0 0rem;
   background: linear-gradient(

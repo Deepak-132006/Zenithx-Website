@@ -1,9 +1,7 @@
 * {
   font-family: "Inter Tight", sans-serif;
 }
-html{
-    scroll-behavior: auto;
-}
+
 :root {
   --light-color: #b67e7d;
   --secondary-color: #640000;
