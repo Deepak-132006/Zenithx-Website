@@ -114,9 +114,7 @@ img{
   color: var(--light-color);
 }
 @media (min-width:768px){
-  .contact-body{
-
-  }
+  
   .contact-details{
     display: flex;
     flex-direction: row;
