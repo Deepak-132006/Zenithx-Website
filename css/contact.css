@@ -1,0 +1,124 @@
+* {
+  font-family: "Inter Tight", sans-serif;
+}
+
+:root {
+  --light-color: #b67e7d;
+  --secondary-color: #640000;
+  --tertiary-color: #420001;
+  --text-color: #040b15;
+  --content-color: #dad5d5;
+}
+.home-alt .home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.contact{
+    background: #fbf7f7;
+}
+.contact-body{
+    position: relative;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  justify-items: start;        
+  align-items: start;
+  gap: 1rem;
+}
+
+.cell {
+  width: fit-content;  
+}
+.contact-brand{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+img{
+  width: 45px;
+}
+.contact-name{
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.core{
+  font-size: larger;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.cell{
+  text-decoration: none;
+  color: var(--light-color);
+  font-weight: 500;
+  &:hover{
+    color: var(--tertiary-color);
+    transition: color 0.5s ease-out;
+  }
+}
+.contact-email{
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+  input {
+    height: 3rem;
+    display: flex;
+    background: #fff;
+    border: none;
+    border-radius: 1.7rem;
+    top: 9.5rem;
+    font-size: 16px;
+    padding: 8px;
+    padding-left: 20px;
+    color: var(--secondary-color);
+  }
+ button {
+    width: 8.5rem;
+    height: 3.3rem;
+    padding: 0.5rem;
+    border-radius: 1.7rem;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    top: 9.5rem;
+    box-shadow: inset 1px 1px 3px white ;
+    &:hover {
+      background-color: var(--tertiary-color);
+    }
+  }
+.contact-details{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact-content h3{
+  font-size: 20px;
+  font-weight: 400;
+  color: #640000;
+  margin-bottom: 5px;
+}
+.contact-content p{
+  color: var(--light-color);
+}
+@media (min-width:768px){
+  .contact-body{
+
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-content: center;
+    align-items: center;
+  }
+}
