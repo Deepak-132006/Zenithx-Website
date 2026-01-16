@@ -6,7 +6,7 @@
 
 ## Features
 
-- **Responsive Design:** Fully mobile-friendly layout that adapts seamlessly across devices.  
+- **Responsive Design:** Fully mobile friendly layout that adapts seamlessly across devices.  
 - **Modern UI/UX:** Clean, professional SaaS-style interface with smooth navigation and clear visual hierarchy..
 - **Interactive Elements:** Hover effects, buttons, accordions (FAQ), and call-to-action sections.  
 - **Dashboard Mockups:** Realistic analytics panels with charts, metrics, and agent status placeholders.  
