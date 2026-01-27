@@ -17,7 +17,6 @@
 - **Placeholder Content Integration:** Professional use of mock logos, testimonials, and data visualizations.  
 
 ---
-
 ## Built With
 
 - HTML5  
