@@ -1,6 +1,6 @@
 # Zenithx
 
-**Zenithx** is a custom-built, responsive website for a fictional AI-powered SaaS platform. Created as a portfolio project to showcase Web development skills, it features modern UI/UX, dashboard mockups, and clean, maintainable code. All content is placeholder — no real functionality — demonstrating expertise in HTML, CSS, and JavaScript. 
+**Zenithx** is a custom-built, responsive website for a fictional AI-powered SaaS platform. Created as a portfolio project to showcase Web development skills, it features modern UI/UX, dashboard mockups, and clean, maintainable code. All content is placeholder — no real functionality — demonstrating expertise in HTML, CSS, and JavaScript 
 
 ---
 
